@@ -1,0 +1,10 @@
+<h1 class="article-title"><%= @article.title %></h1>
+<div class="article-img">
+  <%= image_tag @article.picture.url(), class: "img-modal" %>
+</div>
+<p class="article-text">
+  <%= @article.content %>
+</p>
+<p>
+  <%= link_to 'back to index', articles_path, class: "btn btn-default pull-right" %>
+</p>

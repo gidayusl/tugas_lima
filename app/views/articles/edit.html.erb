@@ -1,2 +1,28 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<h2>Edit an Article</h2>
+<%= form_for @article do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+    <span class="text-danger"><%= @article.errors[:title].first unless @article.errors[:title].blank? %></span>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control", cols: 20, rows: 10 %>
+    <span class="text-danger"><%= @article.errors[:content].first unless @article.errors[:content].blank? %></span>
+    <%= f.hidden_field :status %>
+  </div>
+  <div class="form-group">
+    <%= f.file_field :picture %>
+    <span class="text-danger"><%= @article.errors[:picture].first unless @article.errors[:picture].blank? %></span>
+  </div>
+  <div class="form-group">
+    <%= f.submit :submit, class: "btn btn-success" %>
+    <%= link_to 'Back', articles_path, class: "btn btn-warning" %>
+  </div>
+<% end %>
+<script>
+  function clear_image(){
+      $("#show_article_image").hide();
+      $("#input_article_image").show();   
+  }
+</script>
