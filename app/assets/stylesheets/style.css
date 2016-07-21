@@ -97,3 +97,12 @@ body {
 .article-img{
   text-align: center;
 }
+.img-previous{
+  width: 50px;
+}
+.img-preview{
+  padding-top: 15px;
+}
+.img-preview img{
+  width: 200px;
+}
