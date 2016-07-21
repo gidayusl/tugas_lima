@@ -110,3 +110,14 @@ body {
 .img-preview img{
   width: 200px;
 }
+/* Pagination */
+.pagination li a{
+  border: 1px solid #660000;
+  color : #000;
+}
+.pagination>li>a:focus, .pagination>li>a:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #990000;
+    border-color: #ff0000;
+}

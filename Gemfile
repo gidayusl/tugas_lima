@@ -26,7 +26,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use paperclip to upload image
 gem 'paperclip', '~> 5.0'
+# Use kaminari to pagination and limit data per page
+gem 'kaminari', '~> 0.17.0'
+# Use axlsx to export and import report
+gem 'axlsx', '~> 2.0', '>= 2.0.1'
+gem 'rubyzip', '= 1.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
