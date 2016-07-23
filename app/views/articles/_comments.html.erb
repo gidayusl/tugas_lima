@@ -1,6 +1,5 @@
 <% @comments.each do |comment| %>
-<p>
-  <br />
-  <%= comment.content %>
-</p>
+<div class="comment-box">
+  <p><%= comment.content %></p>
+</div>
 <% end %>

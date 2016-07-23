@@ -9,12 +9,11 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
-    puts @article
   end
   
   def show
     @article = Article.find(params[:id])
-    @comments = @article.comments.order("id desc")
+    @comments = @article.comments.order("id desc").page(params[:page])
   end
   
   def create

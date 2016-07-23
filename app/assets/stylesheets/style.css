@@ -94,6 +94,12 @@ body {
   transform: translate3d(0, -300px, 0);
   opacity: 1;
 }
+.article-content{
+  padding-bottom: 15px;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #00b33c;
+}
 .article-img{
   text-align: center;
   padding: 15px 0;
@@ -126,4 +132,16 @@ body {
 .pagination>.active>span:focus, .pagination>.active>span:hover{
   background-color: #990000;
   border-color: #ff0000;
+}
+/*Comments*/
+.comment-form{
+  padding: 15px 0;
+}
+.comment-content{
+  float: left;
+  width: 100%;
+}
+.comment-box{
+  padding: 15px 0;
+  border-bottom: 1px solid #ebebeb;
 }
