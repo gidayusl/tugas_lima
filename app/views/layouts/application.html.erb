@@ -23,6 +23,19 @@
               <%= link_to "Articles", articles_path %>
             </li>
           </ul>
+          <ul class="nav navbar-nav pull-right sign-link">
+            <li>
+              <% if !current_user %>
+              <%= link_to 'Log-in', login_path, class: "in-link" %>
+              <% else %>
+              <span>Hello, <%= current_user.username %></span> 
+              <%= link_to 'Log Out', logout_path(current_user.id), class:"out-link" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "Sign Up", sign_up_path, class: "up-link"  %> 
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -31,6 +44,6 @@
         <%= yield %>
       
     </div>
-    <%= javascript_include_tag 'script', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'script' %>
   </body>
 </html>

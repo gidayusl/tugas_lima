@@ -1,5 +1,5 @@
 <h2>Edit an Article</h2>
-<%= form_for @article do |f| %>
+<%= form_for @article, html: { multipart: true } do |f| %>
 <div class="form-group">
   <%= f.label :title %>
   <%= f.text_field :title, class: "form-control" %>
