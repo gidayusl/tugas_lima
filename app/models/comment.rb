@@ -3,10 +3,9 @@ class Comment < ApplicationRecord
   before_create :default_status
   belongs_to :article
   validates :content, presence: true, length: { minimum: 10 }
-  
-  before_create :default_status
+  default_scope {where(status: 'active')}
   
   def default_status
-      self.status = "off"
+      self.status = "active"
   end
 end
