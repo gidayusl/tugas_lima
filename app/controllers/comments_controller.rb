@@ -14,7 +14,10 @@ class CommentsController < ApplicationController
     respond_to do |format|
       @comment = Comment.new(params_comment)
       if @comment.save
-        format.js {@comments = Article.find_by_id(params[:comment][:article_id]).comments.order("id desc")}
+        format.js {
+          @comments = Article.find_by_id(params[:comment][:article_id]).comments.order("id desc")
+          @count = @comments.count
+        }
       else
         format.js {@article = Article.find_by_id(params[:comment][:article_id])}
       end

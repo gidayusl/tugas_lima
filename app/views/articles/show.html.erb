@@ -11,12 +11,14 @@
   </p>
 </div>
 <div class="comment-content">
-<div class="comment-form" id="form-comment">
-  <h5><%= Comment.where(:article_id => @article.id).count %> comment(s)</h5>
-  <%= render 'form_comment' %>
-</div>
-<div class="comments-list" id="list-comments">
-  <h4>Here the comments</h4>
-  <%= render 'comments' %>
-</div>
+  <div class="comment-form" id="form-comment">
+    <h5 id="comments-count"><%= render 'count' %></h5>
+    <%= render 'form_comment' %>
+  </div>
+  <div class="comments-list">
+    <h4 class="comments-list-title">Here the comments</h4>
+    <div class="comments-list-body" id="list-comments">
+      <%= render 'comments' %>
+    </div>
+  </div>
 </div>

@@ -34,6 +34,7 @@ gem 'kaminari', '~> 0.17.0'
 # Use axlsx to export and import report
 gem 'axlsx', '~> 2.0', '>= 2.0.1'
 gem 'rubyzip', '= 1.0.0'
+gem 'axlsx_rails', '~> 0.4.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

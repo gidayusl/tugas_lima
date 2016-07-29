@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @comments = @article.comments.order("id desc").page(params[:page])
     @comment = Comment.new
+    @count = @article.comments.order("id desc").count
   end
   
   def create
